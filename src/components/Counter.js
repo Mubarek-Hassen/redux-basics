@@ -17,14 +17,14 @@ const Counter = () => {
     dispatch(counterActions.incrementMethod())
   }
   const increaseHandler=()=>{
-    dispatch({type: 'increaseby5', amount: 5})
+    dispatch(counterActions.increaseMethod(5))
   }
   const decrementHandler =()=>{
-    dispatch({type: 'decrement'})
+    dispatch(counterActions.decrementMethod())
   }
 
   const toggleCounterHandler = () => {
-    dispatch({type: 'toggle'})
+    dispatch(counterActions.toggleCounter())
   };
 
   return (
