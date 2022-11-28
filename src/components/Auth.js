@@ -1,6 +1,11 @@
 import classes from './Auth.module.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { authActions } from '../store';
+
 
 const Auth = () => {
+  const dispatch = useDispatch()
+  const isAuthenticated = useSelector(state => state.auth.isAuthenticated)
   return (
     <main className={classes.auth}>
       <section>
